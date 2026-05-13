@@ -1,4 +1,4 @@
-{
+﻿{
   "action.checkForUpdates": "Check for updates",
   "action.delete": "Remove plugin",
   "action.deleteContentLeft": "Would you like to remove ",
@@ -139,7 +139,7 @@
   "detailPanel.toolSelector.unsupportedContent2": "Click to switch version.",
   "detailPanel.toolSelector.unsupportedMCPTool": "Currently selected agent strategy plugin version does not support MCP tools.",
   "detailPanel.toolSelector.unsupportedTitle": "Unsupported Action",
-  "difyVersionNotCompatible": "The current platform version is not compatible with this plugin. Please upgrade to at least: {{minimalVersion}}",
+  "BetaAIVersionNotCompatible": "The current platform version is not compatible with this plugin. Please upgrade to at least: {{minimalVersion}}",
   "endpointsEnabled": "{{num}} sets of endpoints enabled",
   "error.fetchReleasesError": "Unable to retrieve releases. Please try again later.",
   "error.inValidGitHubUrl": "Invalid GitHub URL. Please enter a valid URL in the format: https://github.com/owner/repo",
@@ -193,7 +193,7 @@
   "list.source.local": "Install from Local Package File",
   "list.source.marketplace": "Install from Marketplace",
   "marketplace.and": "and",
-  "marketplace.difyMarketplace": "Plugin Marketplace",
+  "marketplace.BetaAIMarketplace": "Plugin Marketplace",
   "marketplace.discover": "Discover",
   "marketplace.empower": "Empower your AI development",
   "marketplace.moreFrom": "More from Marketplace",

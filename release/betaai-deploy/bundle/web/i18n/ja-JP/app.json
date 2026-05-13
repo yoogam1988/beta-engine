@@ -1,4 +1,4 @@
-{
+﻿{
   "accessControl": "Web アプリアクセス制御",
   "accessControlDialog.accessItems.anyone": "リンクを知っているすべてのユーザー",
   "accessControlDialog.accessItems.external": "認証済みの外部ユーザー",
@@ -255,7 +255,7 @@
   "tracing.langfuse.title": "Langfuse",
   "tracing.langsmith.description": "LLM を利用したアプリケーションのライフサイクル全段階を支援する、オールインワンの開発者向けプラットフォームです。",
   "tracing.langsmith.title": "LangSmith",
-  "tracing.mlflow.description": "MLflowはLLMアプリケーションの実験管理・評価・監視を行うためのオープンソースプラットフォームです。Difyアプリの実行をトレースし、デバッグや改善に役立てることができます。",
+  "tracing.mlflow.description": "MLflowはLLMアプリケーションの実験管理・評価・監視を行うためのオープンソースプラットフォームです。BetaAIアプリの実行をトレースし、デバッグや改善に役立てることができます。",
   "tracing.mlflow.title": "MLflow",
   "tracing.opik.description": "Opik は、LLM アプリケーションを評価、テスト、監視するためのオープンソース プラットフォームです。",
   "tracing.opik.title": "オピック",

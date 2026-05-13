@@ -12,8 +12,8 @@ const LogoSite: FC<LogoSiteProps> = ({
 }) => {
   return (
     <img
-      src={`${basePath}/logo/logo.png`}
-      className={cn('block h-[24.5px] w-[22.651px]', className)}
+      src={`${basePath}/logo/logo-site.png`}
+      className={cn('block h-auto w-auto max-h-[24.5px]', className)}
       alt="logo"
     />
   )

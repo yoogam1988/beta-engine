@@ -1,44 +1,63 @@
-# AtomFlow Internal Deployment Bundle
+# BetaAI (贝塔引擎) 部署包
 
-This bundle deploys your rebranded internal platform by building images from bundled `api/` and `web/` source code.
+此部署包用于在企业服务器上部署 BetaAI 平台。
 
-## 1. Build the deployment zip (on build machine)
+## 部署步骤
 
-```powershell
-cd release/atomflow-deploy
-powershell -ExecutionPolicy Bypass -File .\build-package.ps1
-```
+### Windows 服务器
 
-Output zip:
-
-`release/atomflow-deploy/atomflow-deploy-bundle-YYYYMMDD.zip`
-
-## 2. Deploy on target server
-
-1. Unzip the bundle.
-2. Edit `.env` (or let script create from `.env.atomflow.example` first).
-3. Start services (script runs image build first, then `up -d`):
-
-PowerShell:
+1. 解压部署包
+2. 编辑 `.env` 文件，设置 `SECRET_KEY`（或运行脚本自动生成）
+3. 运行部署脚本：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\run.ps1
 ```
 
-Bash:
+### Linux 服务器
+
+1. 解压部署包
+2. 编辑 `.env` 文件，设置 `SECRET_KEY`
 
 ```bash
-chmod +x ./run.sh
+chmod +x run.sh
 ./run.sh
 ```
 
-## 3. Verify
+## 访问地址
+
+部署完成后访问：`http://<服务器IP>`
+
+## 常见问题
+
+### 1. Docker 未安装
+请先安装 Docker 和 Docker Compose v2
+
+### 2. 端口被占用
+编辑 `docker/.env` 文件，修改 `EXPOSE_NGINX_PORT` 和 `EXPOSE_NGINX_SSL_PORT`
+
+### 3. 内存不足
+调整 `docker/.env` 中的 `SERVER_WORKER_AMOUNT` 和 `CELERY_WORKER_AMOUNT`
+
+### 4. 镜像加载失败
+如果镜像 tar 文件加载失败，请检查 Docker 版本是否兼容
+
+## 运维命令
 
 ```bash
-docker compose -f ./docker/docker-compose.yaml -f ./docker-compose.atomflow-build.yaml --env-file ./.env ps
+# 查看服务状态
+docker compose ps
+
+# 查看日志
+docker compose logs -f
+
+# 重启服务
+docker compose restart
+
+# 停止服务
+docker compose down
 ```
 
-Access URL defaults to:
+## 联系支持
 
-- Console/Web: `http://<server-ip>`
-- API: `http://<server-ip>/console/api`
+如有问题，请联系：admin@gpnjvc.com

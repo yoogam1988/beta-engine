@@ -58,10 +58,10 @@ x-shared-env: &shared-api-worker-env
   NEXT_PUBLIC_ENABLE_SINGLE_DOLLAR_LATEX: ${NEXT_PUBLIC_ENABLE_SINGLE_DOLLAR_LATEX:-false}
   DB_TYPE: ${DB_TYPE:-postgresql}
   DB_USERNAME: ${DB_USERNAME:-postgres}
-  DB_PASSWORD: ${DB_PASSWORD:-difyai123456}
+  DB_PASSWORD: ${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   DB_HOST: ${DB_HOST:-db_postgres}
   DB_PORT: ${DB_PORT:-5432}
-  DB_DATABASE: ${DB_DATABASE:-dify}
+  DB_DATABASE: ${DB_DATABASE:-betaai}
   SQLALCHEMY_POOL_SIZE: ${SQLALCHEMY_POOL_SIZE:-30}
   SQLALCHEMY_MAX_OVERFLOW: ${SQLALCHEMY_MAX_OVERFLOW:-10}
   SQLALCHEMY_POOL_RECYCLE: ${SQLALCHEMY_POOL_RECYCLE:-3600}
@@ -83,7 +83,7 @@ x-shared-env: &shared-api-worker-env
   REDIS_HOST: ${REDIS_HOST:-redis}
   REDIS_PORT: ${REDIS_PORT:-6379}
   REDIS_USERNAME: ${REDIS_USERNAME:-}
-  REDIS_PASSWORD: ${REDIS_PASSWORD:-difyai123456}
+  REDIS_PASSWORD: ${REDIS_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   REDIS_USE_SSL: ${REDIS_USE_SSL:-false}
   REDIS_SSL_CERT_REQS: ${REDIS_SSL_CERT_REQS:-CERT_NONE}
   REDIS_SSL_CA_CERTS: ${REDIS_SSL_CA_CERTS:-}
@@ -100,7 +100,7 @@ x-shared-env: &shared-api-worker-env
   REDIS_USE_CLUSTERS: ${REDIS_USE_CLUSTERS:-false}
   REDIS_CLUSTERS: ${REDIS_CLUSTERS:-}
   REDIS_CLUSTERS_PASSWORD: ${REDIS_CLUSTERS_PASSWORD:-}
-  CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://:difyai123456@redis:6379/1}
+  CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://:BetaAI@2026Secure!xK9mP2@redis:6379/1}
   CELERY_BACKEND: ${CELERY_BACKEND:-redis}
   BROKER_USE_SSL: ${BROKER_USE_SSL:-false}
   CELERY_USE_SENTINEL: ${CELERY_USE_SENTINEL:-false}
@@ -183,7 +183,7 @@ x-shared-env: &shared-api-worker-env
   OCEANBASE_VECTOR_HOST: ${OCEANBASE_VECTOR_HOST:-oceanbase}
   OCEANBASE_VECTOR_PORT: ${OCEANBASE_VECTOR_PORT:-2881}
   OCEANBASE_VECTOR_USER: ${OCEANBASE_VECTOR_USER:-root@test}
-  OCEANBASE_VECTOR_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
+  OCEANBASE_VECTOR_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   OCEANBASE_VECTOR_DATABASE: ${OCEANBASE_VECTOR_DATABASE:-test}
   OCEANBASE_CLUSTER_NAME: ${OCEANBASE_CLUSTER_NAME:-difyai}
   OCEANBASE_MEMORY_LIMIT: ${OCEANBASE_MEMORY_LIMIT:-6G}
@@ -191,7 +191,7 @@ x-shared-env: &shared-api-worker-env
   OCEANBASE_FULLTEXT_PARSER: ${OCEANBASE_FULLTEXT_PARSER:-ik}
   SEEKDB_MEMORY_LIMIT: ${SEEKDB_MEMORY_LIMIT:-2G}
   QDRANT_URL: ${QDRANT_URL:-http://qdrant:6333}
-  QDRANT_API_KEY: ${QDRANT_API_KEY:-difyai123456}
+  QDRANT_API_KEY: ${QDRANT_API_KEY:-BetaAI@2026Secure!xK9mP2}
   QDRANT_CLIENT_TIMEOUT: ${QDRANT_CLIENT_TIMEOUT:-20}
   QDRANT_GRPC_ENABLED: ${QDRANT_GRPC_ENABLED:-false}
   QDRANT_GRPC_PORT: ${QDRANT_GRPC_PORT:-6334}
@@ -228,7 +228,7 @@ x-shared-env: &shared-api-worker-env
   PGVECTOR_HOST: ${PGVECTOR_HOST:-pgvector}
   PGVECTOR_PORT: ${PGVECTOR_PORT:-5432}
   PGVECTOR_USER: ${PGVECTOR_USER:-postgres}
-  PGVECTOR_PASSWORD: ${PGVECTOR_PASSWORD:-difyai123456}
+  PGVECTOR_PASSWORD: ${PGVECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   PGVECTOR_DATABASE: ${PGVECTOR_DATABASE:-dify}
   PGVECTOR_MIN_CONNECTION: ${PGVECTOR_MIN_CONNECTION:-1}
   PGVECTOR_MAX_CONNECTION: ${PGVECTOR_MAX_CONNECTION:-5}
@@ -244,7 +244,7 @@ x-shared-env: &shared-api-worker-env
   PGVECTO_RS_HOST: ${PGVECTO_RS_HOST:-pgvecto-rs}
   PGVECTO_RS_PORT: ${PGVECTO_RS_PORT:-5432}
   PGVECTO_RS_USER: ${PGVECTO_RS_USER:-postgres}
-  PGVECTO_RS_PASSWORD: ${PGVECTO_RS_PASSWORD:-difyai123456}
+  PGVECTO_RS_PASSWORD: ${PGVECTO_RS_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   PGVECTO_RS_DATABASE: ${PGVECTO_RS_DATABASE:-dify}
   ANALYTICDB_KEY_ID: ${ANALYTICDB_KEY_ID:-your-ak}
   ANALYTICDB_KEY_SECRET: ${ANALYTICDB_KEY_SECRET:-your-sk}
@@ -296,14 +296,14 @@ x-shared-env: &shared-api-worker-env
   ALIBABACLOUD_MYSQL_HOST: ${ALIBABACLOUD_MYSQL_HOST:-127.0.0.1}
   ALIBABACLOUD_MYSQL_PORT: ${ALIBABACLOUD_MYSQL_PORT:-3306}
   ALIBABACLOUD_MYSQL_USER: ${ALIBABACLOUD_MYSQL_USER:-root}
-  ALIBABACLOUD_MYSQL_PASSWORD: ${ALIBABACLOUD_MYSQL_PASSWORD:-difyai123456}
+  ALIBABACLOUD_MYSQL_PASSWORD: ${ALIBABACLOUD_MYSQL_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   ALIBABACLOUD_MYSQL_DATABASE: ${ALIBABACLOUD_MYSQL_DATABASE:-dify}
   ALIBABACLOUD_MYSQL_MAX_CONNECTION: ${ALIBABACLOUD_MYSQL_MAX_CONNECTION:-5}
   ALIBABACLOUD_MYSQL_HNSW_M: ${ALIBABACLOUD_MYSQL_HNSW_M:-6}
   RELYT_HOST: ${RELYT_HOST:-db}
   RELYT_PORT: ${RELYT_PORT:-5432}
   RELYT_USER: ${RELYT_USER:-postgres}
-  RELYT_PASSWORD: ${RELYT_PASSWORD:-difyai123456}
+  RELYT_PASSWORD: ${RELYT_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   RELYT_DATABASE: ${RELYT_DATABASE:-postgres}
   OPENSEARCH_HOST: ${OPENSEARCH_HOST:-opensearch}
   OPENSEARCH_PORT: ${OPENSEARCH_PORT:-9200}
@@ -534,7 +534,7 @@ x-shared-env: &shared-api-worker-env
   WEAVIATE_ENABLE_TOKENIZER_GSE: ${WEAVIATE_ENABLE_TOKENIZER_GSE:-false}
   WEAVIATE_ENABLE_TOKENIZER_KAGOME_JA: ${WEAVIATE_ENABLE_TOKENIZER_KAGOME_JA:-false}
   WEAVIATE_ENABLE_TOKENIZER_KAGOME_KR: ${WEAVIATE_ENABLE_TOKENIZER_KAGOME_KR:-false}
-  CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-difyai123456}
+  CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-BetaAI@2026Secure!xK9mP2}
   CHROMA_SERVER_AUTHN_PROVIDER: ${CHROMA_SERVER_AUTHN_PROVIDER:-chromadb.auth.token_authn.TokenAuthenticationServerProvider}
   CHROMA_IS_PERSISTENT: ${CHROMA_IS_PERSISTENT:-TRUE}
   ORACLE_PWD: ${ORACLE_PWD:-Dify123456}
@@ -549,7 +549,7 @@ x-shared-env: &shared-api-worker-env
   MINIO_ADDRESS: ${MINIO_ADDRESS:-minio:9000}
   MILVUS_AUTHORIZATION_ENABLED: ${MILVUS_AUTHORIZATION_ENABLED:-true}
   PGVECTOR_PGUSER: ${PGVECTOR_PGUSER:-postgres}
-  PGVECTOR_POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
+  PGVECTOR_POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-BetaAI@2026Secure!xK9mP2}
   PGVECTOR_POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
   PGVECTOR_PGDATA: ${PGVECTOR_PGDATA:-/var/lib/postgresql/data/pgdata}
   OPENSEARCH_DISCOVERY_TYPE: ${OPENSEARCH_DISCOVERY_TYPE:-single-node}
@@ -875,8 +875,8 @@ services:
     restart: always
     environment:
       POSTGRES_USER: ${DB_USERNAME:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-difyai123456}
-      POSTGRES_DB: ${DB_DATABASE:-dify}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}
+      POSTGRES_DB: ${DB_DATABASE:-betaai}
       PGDATA: ${PGDATA:-/var/lib/postgresql/data/pgdata}
     command: >
       postgres -c 'max_connections=${POSTGRES_MAX_CONNECTIONS:-100}'
@@ -898,7 +898,7 @@ services:
           "-U",
           "${DB_USERNAME:-postgres}",
           "-d",
-          "${DB_DATABASE:-dify}",
+          "${DB_DATABASE:-betaai}",
         ]
       interval: 1s
       timeout: 3s
@@ -911,8 +911,8 @@ services:
       - mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-difyai123456}
-      MYSQL_DATABASE: ${DB_DATABASE:-dify}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}
+      MYSQL_DATABASE: ${DB_DATABASE:-betaai}
     command: >
       --max_connections=1000
       --innodb_buffer_pool_size=${MYSQL_INNODB_BUFFER_POOL_SIZE:-512M}
@@ -928,7 +928,7 @@ services:
           "ping",
           "-u",
           "root",
-          "-p${DB_PASSWORD:-difyai123456}",
+          "-p${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}",
         ]
       interval: 1s
       timeout: 3s
@@ -939,17 +939,17 @@ services:
     image: redis:6-alpine
     restart: always
     environment:
-      REDISCLI_AUTH: ${REDIS_PASSWORD:-difyai123456}
+      REDISCLI_AUTH: ${REDIS_PASSWORD:-BetaAI@2026Secure!xK9mP2}
     volumes:
       # Mount the redis data directory to the container.
       - ./volumes/redis/data:/data
     # Set the redis password when startup redis server.
-    command: redis-server --requirepass ${REDIS_PASSWORD:-difyai123456}
+    command: redis-server --requirepass ${REDIS_PASSWORD:-BetaAI@2026Secure!xK9mP2}
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "redis-cli -a ${REDIS_PASSWORD:-difyai123456} ping | grep -q PONG",
+          "redis-cli -a ${REDIS_PASSWORD:-BetaAI@2026Secure!xK9mP2} ping | grep -q PONG",
         ]
 
   # The DifySandbox
@@ -1179,8 +1179,8 @@ services:
       - ./volumes/oceanbase/init.d:/root/boot/init.d
     environment:
       OB_MEMORY_LIMIT: ${OCEANBASE_MEMORY_LIMIT:-6G}
-      OB_SYS_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
-      OB_TENANT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
+      OB_SYS_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2}
+      OB_TENANT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2}
       OB_CLUSTER_NAME: ${OCEANBASE_CLUSTER_NAME:-difyai}
       OB_SERVER_IP: 127.0.0.1
       MODE: mini
@@ -1192,7 +1192,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'obclient -h127.0.0.1 -P2881 -uroot@test -p${OCEANBASE_VECTOR_PASSWORD:-difyai123456} -e "SELECT 1;"',
+          'obclient -h127.0.0.1 -P2881 -uroot@test -p${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2} -e "SELECT 1;"',
         ]
       interval: 10s
       retries: 30
@@ -1209,7 +1209,7 @@ services:
     volumes:
       - ./volumes/seekdb:/var/lib/oceanbase
     environment:
-      ROOT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
+      ROOT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2}
       MEMORY_LIMIT: ${SEEKDB_MEMORY_LIMIT:-2G}
       REPORTER: dify-ai-seekdb
     ports:
@@ -1218,7 +1218,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'mysql -h127.0.0.1 -P2881 -uroot -p${OCEANBASE_VECTOR_PASSWORD:-difyai123456} -e "SELECT 1;"',
+          'mysql -h127.0.0.1 -P2881 -uroot -p${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!xK9mP2} -e "SELECT 1;"',
         ]
       interval: 5s
       retries: 60
@@ -1227,14 +1227,14 @@ services:
   # Qdrant vector store.
   # (if used, you need to set VECTOR_STORE to qdrant in the api & worker service.)
   qdrant:
-    image: langgenius/qdrant:v1.8.3
+    image: betaai/qdrant:v1.8.3
     profiles:
       - qdrant
     restart: always
     volumes:
       - ./volumes/qdrant:/qdrant/storage
     environment:
-      QDRANT_API_KEY: ${QDRANT_API_KEY:-difyai123456}
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-BetaAI@2026Secure!xK9mP2}
 
   # The Couchbase vector store.
   couchbase-server:
@@ -1282,7 +1282,7 @@ services:
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
+      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-BetaAI@2026Secure!xK9mP2}
       # The name of the default postgres database.
       POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
       # postgres data directory
@@ -1333,7 +1333,7 @@ services:
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
+      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-BetaAI@2026Secure!xK9mP2}
       # The name of the default postgres database.
       POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
       # postgres data directory
@@ -1355,7 +1355,7 @@ services:
     volumes:
       - ./volumes/chroma:/chroma/chroma
     environment:
-      CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-difyai123456}
+      CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-BetaAI@2026Secure!xK9mP2}
       CHROMA_SERVER_AUTHN_PROVIDER: ${CHROMA_SERVER_AUTHN_PROVIDER:-chromadb.auth.token_authn.TokenAuthenticationServerProvider}
       IS_PERSISTENT: ${CHROMA_IS_PERSISTENT:-TRUE}
 

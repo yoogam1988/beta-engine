@@ -1,4 +1,4 @@
-{
+﻿{
   "error.unavailable": "This Knowledge is not available",
   "firecrawl.apiKeyPlaceholder": "API key from firecrawl.dev",
   "firecrawl.configFirecrawl": "Configure 🔥Firecrawl",
@@ -81,7 +81,7 @@
   "stepThree.additionP1": "The document has been uploaded to the Knowledge",
   "stepThree.additionP2": ", you can find it in the document list of the Knowledge.",
   "stepThree.additionTitle": "🎉 Document uploaded",
-  "stepThree.creationContent": "We automatically named the Knowledge, you can modify it at any time.",
+  "stepThree.creationContent": "We automatically named the Knowledge, you can moBetaAI it at any time.",
   "stepThree.creationTitle": "🎉 Knowledge created",
   "stepThree.label": "Knowledge name",
   "stepThree.modelButtonCancel": "Cancel",
@@ -90,7 +90,7 @@
   "stepThree.modelTitle": "Are you sure to stop embedding?",
   "stepThree.navTo": "Go to document",
   "stepThree.resume": "Resume processing",
-  "stepThree.sideTipContent": "After finishing document indexing, you can manage and edit documents, run retrieval tests, and modify knowledge settings. Knowledge can then be integrated into your application as context, so make sure to adjust the Retrieval Setting to ensure optimal performance.",
+  "stepThree.sideTipContent": "After finishing document indexing, you can manage and edit documents, run retrieval tests, and moBetaAI knowledge settings. Knowledge can then be integrated into your application as context, so make sure to adjust the Retrieval Setting to ensure optimal performance.",
   "stepThree.sideTipTitle": "What's next",
   "stepThree.stop": "Stop processing",
   "stepTwo.QALanguage": "Segment using",

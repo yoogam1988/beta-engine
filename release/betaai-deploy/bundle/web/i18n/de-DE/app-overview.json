@@ -1,4 +1,4 @@
-{
+﻿{
   "analysis.activeUsers.explanation": "Einzigartige Benutzer, die mit AI Q&A führen; Prompt-Engineering/Debugging ausgenommen.",
   "analysis.activeUsers.title": "Aktive Benutzer",
   "analysis.avgResponseTime.explanation": "Zeit (ms) für die AI, um zu verarbeiten/antworten; für textbasierte Apps.",
@@ -88,7 +88,7 @@
   "overview.appInfo.settings.more.entry": "Mehr Einstellungen anzeigen",
   "overview.appInfo.settings.more.privacyPolicy": "Datenschutzrichtlinie",
   "overview.appInfo.settings.more.privacyPolicyPlaceholder": "Geben Sie den Link zur Datenschutzrichtlinie ein",
-  "overview.appInfo.settings.more.privacyPolicyTip": "Hilft Besuchern zu verstehen, welche Daten die Anwendung sammelt, siehe Difys <privacyPolicyLink>Datenschutzrichtlinie</privacyPolicyLink>.",
+  "overview.appInfo.settings.more.privacyPolicyTip": "Hilft Besuchern zu verstehen, welche Daten die Anwendung sammelt, siehe BetaAIs <privacyPolicyLink>Datenschutzrichtlinie</privacyPolicyLink>.",
   "overview.appInfo.settings.sso.description": "Alle Benutzer müssen sich mit SSO anmelden, bevor sie web app verwenden können",
   "overview.appInfo.settings.sso.label": "SSO-Authentifizierung",
   "overview.appInfo.settings.sso.title": "web app SSO",

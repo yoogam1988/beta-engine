@@ -1,4 +1,4 @@
-{
+﻿{
   "common.confirmPublish": "Confirm Publish",
   "common.confirmPublishContent": "After successfully publishing the knowledge pipeline, the chunk structure of this knowledge base cannot be modified. Are you sure you want to publish it?",
   "common.goToAddDocuments": "Go to add documents",
@@ -13,7 +13,7 @@
   "common.testRun": "Test Run",
   "inputField.create": "Create user input field",
   "inputField.manage": "Manage",
-  "publishToast.desc": "When the pipeline is not published, you can modify the chunk structure in the knowledge base node, and the pipeline orchestration and changes will be automatically saved as a draft.",
+  "publishToast.desc": "When the pipeline is not published, you can moBetaAI the chunk structure in the knowledge base node, and the pipeline orchestration and changes will be automatically saved as a draft.",
   "publishToast.title": "This pipeline has not yet been published",
   "ragToolSuggestions.noRecommendationPlugins": "No recommended plugins, find more in <CustomLink>Marketplace</CustomLink>",
   "ragToolSuggestions.title": "Suggestions for RAG",

@@ -1,4 +1,4 @@
-{
+﻿{
   "analysis.activeUsers.explanation": "Unique users engaging in Q&A with AI; prompt engineering/debugging excluded.",
   "analysis.activeUsers.title": "Active Users",
   "analysis.avgResponseTime.explanation": "Time (ms) for AI to process/respond; for text-based apps.",
@@ -40,10 +40,10 @@
   "overview.appInfo.customize.explanation": "You can customize the frontend of the Web App to fit your scenario and style needs.",
   "overview.appInfo.customize.title": "Customize AI web app",
   "overview.appInfo.customize.way": "way",
-  "overview.appInfo.customize.way1.name": "Fork the client code, modify it and deploy to Vercel (recommended)",
-  "overview.appInfo.customize.way1.step1": "Fork the client code and modify it",
+  "overview.appInfo.customize.way1.name": "Fork the client code, moBetaAI it and deploy to Vercel (recommended)",
+  "overview.appInfo.customize.way1.step1": "Fork the client code and moBetaAI it",
   "overview.appInfo.customize.way1.step1Operation": "AtomFlow-WebClient",
-  "overview.appInfo.customize.way1.step1Tip": "Click here to fork the source code into your GitHub account and modify the code",
+  "overview.appInfo.customize.way1.step1Tip": "Click here to fork the source code into your GitHub account and moBetaAI the code",
   "overview.appInfo.customize.way1.step2": "Deploy to Vercel",
   "overview.appInfo.customize.way1.step2Operation": "Import repository",
   "overview.appInfo.customize.way1.step2Tip": "Click here to import the repository into Vercel and deploy",

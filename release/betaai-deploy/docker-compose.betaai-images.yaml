@@ -1,12 +1,12 @@
 services:
   api:
-    image: atomflow/api:internal-20260507
+    image: betaai/betaai-api:1.13.3
 
   worker:
-    image: atomflow/api:internal-20260507
+    image: betaai/betaai-api:1.13.3
 
   worker_beat:
-    image: atomflow/api:internal-20260507
+    image: betaai/betaai-api:1.13.3
 
   web:
-    image: atomflow/web:internal-20260507
+    image: betaai/betaai-web:1.13.3

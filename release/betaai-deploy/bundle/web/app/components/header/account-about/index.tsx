@@ -45,15 +45,15 @@ export default function AccountAbout({
             {langGeniusVersionInfo?.current_version}
           </div>
           <div className="flex flex-col items-center gap-2 text-center text-xs font-normal text-text-secondary">
-            <div>Copyright {dayjs().year()} AtomFlow Internal Use.</div>
-            <div className="text-text-accent">Internal deployment build</div>
+            <div>Copyright {dayjs().year()} BetaAI. All rights reserved.</div>
+            <div className="text-text-accent">Self-hosted deployment</div>
           </div>
         </div>
         <div className="-mx-8 mb-4 h-[0.5px] bg-divider-regular" />
         <div className="flex items-center justify-between gap-4">
           <div className="text-xs font-medium text-text-tertiary">
             {isLatest
-              ? `AtomFlow ${langGeniusVersionInfo.latest_version} is the current build.`
+              ? `BetaAI ${langGeniusVersionInfo.latest_version} is the current build.`
               : `New build available: ${langGeniusVersionInfo.latest_version}`}
           </div>
           {!isLatest && (

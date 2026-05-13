@@ -1,4 +1,4 @@
-{
+﻿{
   "allExternalTip": "When using external knowledge only, the user can choose whether to enable the Rerank model. If not enabled, retrieved chunks will be sorted based on scores. When the retrieval strategies of different knowledge bases are inconsistent, it will be inaccurate.",
   "allKnowledge": "All Knowledge",
   "allKnowledgeDescription": "Select to display all knowledge in this workspace. Only the Workspace Owner can manage all knowledge.",
@@ -132,7 +132,7 @@
   "metadata.datasetMetadata.rename": "Rename",
   "metadata.datasetMetadata.values": "{{num}} Values",
   "metadata.documentMetadata.documentInformation": "Document Information",
-  "metadata.documentMetadata.metadataToolTip": "Metadata serves as a critical filter that enhances the accuracy and relevance of information retrieval. You can modify and add metadata for this document here.",
+  "metadata.documentMetadata.metadataToolTip": "Metadata serves as a critical filter that enhances the accuracy and relevance of information retrieval. You can moBetaAI and add metadata for this document here.",
   "metadata.documentMetadata.startLabeling": "Start Labeling",
   "metadata.documentMetadata.technicalParameters": "Technical Parameters",
   "metadata.metadata": "Metadata",

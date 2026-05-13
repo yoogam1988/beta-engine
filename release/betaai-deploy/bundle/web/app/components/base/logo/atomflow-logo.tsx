@@ -7,8 +7,8 @@ import { basePath } from '@/utils/var'
 export type LogoStyle = 'default' | 'monochromeWhite'
 
 export const logoPathMap: Record<LogoStyle, string> = {
-  default: '/atomflow-logo.svg',
-  monochromeWhite: '/atomflow-logo-dark.svg',
+  default: '/logo/logo.png',
+  monochromeWhite: '/logo/logo.png',
 }
 
 export type LogoSize = 'large' | 'medium' | 'small'
@@ -37,7 +37,7 @@ const AtomFlowLogo: FC<AtomFlowLogoProps> = ({
     <img
       src={`${basePath}${logoPathMap[themedStyle]}`}
       className={cn('block object-contain', logoSizeMap[size], className)}
-      alt="AtomFlow logo"
+      alt="BetaAI logo"
     />
   )
 }

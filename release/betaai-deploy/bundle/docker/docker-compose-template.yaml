@@ -35,7 +35,7 @@ services:
       PLUGIN_REMOTE_INSTALL_PORT: ${EXPOSE_PLUGIN_DEBUGGING_PORT:-5003}
       PLUGIN_MAX_PACKAGE_SIZE: ${PLUGIN_MAX_PACKAGE_SIZE:-52428800}
       PLUGIN_DAEMON_TIMEOUT: ${PLUGIN_DAEMON_TIMEOUT:-600.0}
-      INNER_API_KEY_FOR_PLUGIN: ${PLUGIN_DIFY_INNER_API_KEY:-QaHbTe77CtuXmsfyhR7+vRjI/+XbV1AaFy691iy+kGDv2Jvy0/eAh8Y1}
+      INNER_API_KEY_FOR_PLUGIN: ${PLUGIN_DIFY_INNER_API_KEY:-BetaAI@2026InnerKey!mQ4jL7}
     depends_on:
       init_permissions:
         condition: service_completed_successfully
@@ -74,7 +74,7 @@ services:
       SENTRY_TRACES_SAMPLE_RATE: ${API_SENTRY_TRACES_SAMPLE_RATE:-1.0}
       SENTRY_PROFILES_SAMPLE_RATE: ${API_SENTRY_PROFILES_SAMPLE_RATE:-1.0}
       PLUGIN_MAX_PACKAGE_SIZE: ${PLUGIN_MAX_PACKAGE_SIZE:-52428800}
-      INNER_API_KEY_FOR_PLUGIN: ${PLUGIN_DIFY_INNER_API_KEY:-QaHbTe77CtuXmsfyhR7+vRjI/+XbV1AaFy691iy+kGDv2Jvy0/eAh8Y1}
+      INNER_API_KEY_FOR_PLUGIN: ${PLUGIN_DIFY_INNER_API_KEY:-BetaAI@2026InnerKey!mQ4jL7}
     depends_on:
       init_permissions:
         condition: service_completed_successfully
@@ -145,8 +145,8 @@ services:
       CSP_WHITELIST: ${CSP_WHITELIST:-}
       ALLOW_EMBED: ${ALLOW_EMBED:-false}
       ALLOW_UNSAFE_DATA_SCHEME: ${ALLOW_UNSAFE_DATA_SCHEME:-false}
-      MARKETPLACE_API_URL: ${MARKETPLACE_API_URL:-https://marketplace.dify.ai}
-      MARKETPLACE_URL: ${MARKETPLACE_URL:-https://marketplace.dify.ai}
+      MARKETPLACE_API_URL: ${MARKETPLACE_API_URL:-}
+      MARKETPLACE_URL: ${MARKETPLACE_URL:-}
       TOP_K_MAX_VALUE: ${TOP_K_MAX_VALUE:-}
       INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH: ${INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH:-}
       LOOP_NODE_MAX_COUNT: ${LOOP_NODE_MAX_COUNT:-100}
@@ -166,8 +166,8 @@ services:
     restart: always
     environment:
       POSTGRES_USER: ${DB_USERNAME:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-difyai123456}
-      POSTGRES_DB: ${DB_DATABASE:-dify}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}
+      POSTGRES_DB: ${DB_DATABASE:-betaai}
       PGDATA: ${PGDATA:-/var/lib/postgresql/data/pgdata}
     command: >
       postgres -c 'max_connections=${POSTGRES_MAX_CONNECTIONS:-100}'
@@ -189,7 +189,7 @@ services:
           "-U",
           "${DB_USERNAME:-postgres}",
           "-d",
-          "${DB_DATABASE:-dify}",
+          "${DB_DATABASE:-betaai}",
         ]
       interval: 1s
       timeout: 3s
@@ -202,8 +202,8 @@ services:
       - mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-difyai123456}
-      MYSQL_DATABASE: ${DB_DATABASE:-dify}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}
+      MYSQL_DATABASE: ${DB_DATABASE:-betaai}
     command: >
       --max_connections=1000
       --innodb_buffer_pool_size=${MYSQL_INNODB_BUFFER_POOL_SIZE:-512M}
@@ -219,7 +219,7 @@ services:
           "ping",
           "-u",
           "root",
-          "-p${DB_PASSWORD:-difyai123456}",
+          "-p${DB_PASSWORD:-BetaAI@2026Secure!xK9mP2}",
         ]
       interval: 1s
       timeout: 3s
@@ -230,17 +230,17 @@ services:
     image: redis:6-alpine
     restart: always
     environment:
-      REDISCLI_AUTH: ${REDIS_PASSWORD:-difyai123456}
+      REDISCLI_AUTH: ${REDIS_PASSWORD:-BetaAI@2026Secure!rT7nQ5}
     volumes:
       # Mount the redis data directory to the container.
       - ./volumes/redis/data:/data
     # Set the redis password when startup redis server.
-    command: redis-server --requirepass ${REDIS_PASSWORD:-difyai123456}
+    command: redis-server --requirepass ${REDIS_PASSWORD:-BetaAI@2026Secure!rT7nQ5}
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "redis-cli -a ${REDIS_PASSWORD:-difyai123456} ping | grep -q PONG",
+          "redis-cli -a ${REDIS_PASSWORD:-BetaAI@2026Secure!rT7nQ5} ping | grep -q PONG",
         ]
 
   # The DifySandbox
@@ -251,7 +251,7 @@ services:
       # The DifySandbox configurations
       # Make sure you are changing this key for your deployment with a strong key.
       # You can generate a strong key using `openssl rand -base64 42`.
-      API_KEY: ${SANDBOX_API_KEY:-dify-sandbox}
+      API_KEY: ${SANDBOX_API_KEY:-betaai-sandbox}
       GIN_MODE: ${SANDBOX_GIN_MODE:-release}
       WORKER_TIMEOUT: ${SANDBOX_WORKER_TIMEOUT:-15}
       ENABLE_NETWORK: ${SANDBOX_ENABLE_NETWORK:-true}
@@ -274,10 +274,10 @@ services:
     environment:
       # Use the shared environment variables.
       <<: *shared-api-worker-env
-      DB_DATABASE: ${DB_PLUGIN_DATABASE:-dify_plugin}
+      DB_DATABASE: ${DB_PLUGIN_DATABASE:-betaai_plugin}
       DB_SSL_MODE: ${DB_SSL_MODE:-disable}
       SERVER_PORT: ${PLUGIN_DAEMON_PORT:-5002}
-      SERVER_KEY: ${PLUGIN_DAEMON_KEY:-lYkiYYT6owG+71oLerGzA7GXCgOT++6ovaezWAjpCjf+Sjc3ZtU+qUEi}
+      SERVER_KEY: ${PLUGIN_DAEMON_KEY:-BetaAI@2026PluginKey!vN8xR3}
       MAX_PLUGIN_PACKAGE_SIZE: ${PLUGIN_MAX_PACKAGE_SIZE:-52428800}
       PPROF_ENABLED: ${PLUGIN_PPROF_ENABLED:-false}
       DIFY_INNER_API_URL: ${PLUGIN_DIFY_INNER_API_URL:-http://api:5001}
@@ -413,8 +413,8 @@ services:
       NGINX_PORT: ${NGINX_PORT:-80}
       # You're required to add your own SSL certificates/keys to the `./nginx/ssl` directory
       # and modify the env vars below in .env if HTTPS_ENABLED is true.
-      NGINX_SSL_CERT_FILENAME: ${NGINX_SSL_CERT_FILENAME:-dify.crt}
-      NGINX_SSL_CERT_KEY_FILENAME: ${NGINX_SSL_CERT_KEY_FILENAME:-dify.key}
+      NGINX_SSL_CERT_FILENAME: ${NGINX_SSL_CERT_FILENAME:-betaai.crt}
+      NGINX_SSL_CERT_KEY_FILENAME: ${NGINX_SSL_CERT_KEY_FILENAME:-betaai.key}
       NGINX_SSL_PROTOCOLS: ${NGINX_SSL_PROTOCOLS:-TLSv1.2 TLSv1.3}
       NGINX_WORKER_PROCESSES: ${NGINX_WORKER_PROCESSES:-auto}
       NGINX_CLIENT_MAX_BODY_SIZE: ${NGINX_CLIENT_MAX_BODY_SIZE:-100M}
@@ -449,9 +449,9 @@ services:
       CLUSTER_HOSTNAME: ${WEAVIATE_CLUSTER_HOSTNAME:-node1}
       AUTHENTICATION_APIKEY_ENABLED: ${WEAVIATE_AUTHENTICATION_APIKEY_ENABLED:-true}
       AUTHENTICATION_APIKEY_ALLOWED_KEYS: ${WEAVIATE_AUTHENTICATION_APIKEY_ALLOWED_KEYS:-WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih}
-      AUTHENTICATION_APIKEY_USERS: ${WEAVIATE_AUTHENTICATION_APIKEY_USERS:-hello@dify.ai}
+      AUTHENTICATION_APIKEY_USERS: ${WEAVIATE_AUTHENTICATION_APIKEY_USERS:-admin@gpnjvc.com}
       AUTHORIZATION_ADMINLIST_ENABLED: ${WEAVIATE_AUTHORIZATION_ADMINLIST_ENABLED:-true}
-      AUTHORIZATION_ADMINLIST_USERS: ${WEAVIATE_AUTHORIZATION_ADMINLIST_USERS:-hello@dify.ai}
+      AUTHORIZATION_ADMINLIST_USERS: ${WEAVIATE_AUTHORIZATION_ADMINLIST_USERS:-admin@gpnjvc.com}
       DISABLE_TELEMETRY: ${WEAVIATE_DISABLE_TELEMETRY:-false}
       ENABLE_TOKENIZER_GSE: ${WEAVIATE_ENABLE_TOKENIZER_GSE:-false}
       ENABLE_TOKENIZER_KAGOME_JA: ${WEAVIATE_ENABLE_TOKENIZER_KAGOME_JA:-false}
@@ -470,9 +470,9 @@ services:
       - ./volumes/oceanbase/init.d:/root/boot/init.d
     environment:
       OB_MEMORY_LIMIT: ${OCEANBASE_MEMORY_LIMIT:-6G}
-      OB_SYS_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
-      OB_TENANT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
-      OB_CLUSTER_NAME: ${OCEANBASE_CLUSTER_NAME:-difyai}
+      OB_SYS_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!oB6vH8}
+      OB_TENANT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!oB6vH8}
+      OB_CLUSTER_NAME: ${OCEANBASE_CLUSTER_NAME:-betaai}
       OB_SERVER_IP: 127.0.0.1
       MODE: mini
       LANG: C.UTF-8
@@ -483,7 +483,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'obclient -h127.0.0.1 -P2881 -uroot@test -p${OCEANBASE_VECTOR_PASSWORD:-difyai123456} -e "SELECT 1;"',
+          'obclient -h127.0.0.1 -P2881 -uroot@test -p${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!oB6vH8} -e "SELECT 1;"',
         ]
       interval: 10s
       retries: 30
@@ -500,7 +500,7 @@ services:
     volumes:
       - ./volumes/seekdb:/var/lib/oceanbase
     environment:
-      ROOT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-difyai123456}
+      ROOT_PASSWORD: ${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!oB6vH8}
       MEMORY_LIMIT: ${SEEKDB_MEMORY_LIMIT:-2G}
       REPORTER: dify-ai-seekdb
     ports:
@@ -509,7 +509,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'mysql -h127.0.0.1 -P2881 -uroot -p${OCEANBASE_VECTOR_PASSWORD:-difyai123456} -e "SELECT 1;"',
+          'mysql -h127.0.0.1 -P2881 -uroot -p${OCEANBASE_VECTOR_PASSWORD:-BetaAI@2026Secure!oB6vH8} -e "SELECT 1;"',
         ]
       interval: 5s
       retries: 60
@@ -518,14 +518,14 @@ services:
   # Qdrant vector store.
   # (if used, you need to set VECTOR_STORE to qdrant in the api & worker service.)
   qdrant:
-    image: langgenius/qdrant:v1.8.3
+    image: betaai/qdrant:v1.8.3
     profiles:
       - qdrant
     restart: always
     volumes:
       - ./volumes/qdrant:/qdrant/storage
     environment:
-      QDRANT_API_KEY: ${QDRANT_API_KEY:-difyai123456}
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-BetaAI@2026Secure!qD2kW9}
 
   # The Couchbase vector store.
   couchbase-server:
@@ -534,7 +534,7 @@ services:
       - couchbase
     restart: always
     environment:
-      - CLUSTER_NAME=dify_search
+      - CLUSTER_NAME=betaai_search
       - COUCHBASE_ADMINISTRATOR_USERNAME=${COUCHBASE_USER:-Administrator}
       - COUCHBASE_ADMINISTRATOR_PASSWORD=${COUCHBASE_PASSWORD:-password}
       - COUCHBASE_BUCKET=${COUCHBASE_BUCKET_NAME:-Embeddings}
@@ -573,9 +573,9 @@ services:
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
+      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-BetaAI@2026Secure!pG1kW8}
       # The name of the default postgres database.
-      POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
+      POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-betaai}
       # postgres data directory
       PGDATA: ${PGVECTOR_PGDATA:-/var/lib/postgresql/data/pgdata}
       # pg_bigm module for full text search
@@ -624,9 +624,9 @@ services:
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
+      POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-BetaAI@2026Secure!pR8kT1}
       # The name of the default postgres database.
-      POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
+      POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-betaai}
       # postgres data directory
       PGDATA: ${PGVECTOR_PGDATA:-/var/lib/postgresql/data/pgdata}
     volumes:
@@ -646,7 +646,7 @@ services:
     volumes:
       - ./volumes/chroma:/chroma/chroma
     environment:
-      CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-difyai123456}
+      CHROMA_SERVER_AUTHN_CREDENTIALS: ${CHROMA_SERVER_AUTHN_CREDENTIALS:-BetaAI@2026Secure!cH7mN3}
       CHROMA_SERVER_AUTHN_PROVIDER: ${CHROMA_SERVER_AUTHN_PROVIDER:-chromadb.auth.token_authn.TokenAuthenticationServerProvider}
       IS_PERSISTENT: ${CHROMA_IS_PERSISTENT:-TRUE}
 
@@ -851,12 +851,12 @@ services:
     restart: always
     volumes:
       - ./elasticsearch/docker-entrypoint.sh:/docker-entrypoint-mount.sh
-      - dify_es01_data:/usr/share/elasticsearch/data
+      - betaai_es01_data:/usr/share/elasticsearch/data
     environment:
       ELASTIC_PASSWORD: ${ELASTICSEARCH_PASSWORD:-elastic}
       VECTOR_STORE: ${VECTOR_STORE:-}
-      cluster.name: dify-es-cluster
-      node.name: dify-es0
+      cluster.name: betaai-es-cluster
+      node.name: betaai-es0
       discovery.type: single-node
       xpack.license.self_generated.type: basic
       xpack.security.enabled: "true"
@@ -927,4 +927,4 @@ networks:
 
 volumes:
   oradata:
-  dify_es01_data:
+  betaai_es01_data:

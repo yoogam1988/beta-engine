@@ -1,7 +1,7 @@
 {
-  "name": "Dify",
-  "short_name": "Dify",
-  "description": "Build Production Ready Agentic AI Solutions",
+  "name": "BetaAI",
+  "short_name": "BetaAI",
+  "description": "Build Production Ready Agentic AI Solutions with BetaAI",
   "icons": [
     {
       "src": "/icon-192x192.png",
