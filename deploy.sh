@@ -2,7 +2,7 @@
 set -e
 
 echo "========================================="
-echo "  BetaAI (贝塔引擎) One-Click Deploy"
+echo "  BetaAI One-Click Deploy"
 echo "========================================="
 echo ""
 
@@ -14,7 +14,7 @@ fi
 
 # Check Docker Compose
 if ! docker compose version &> /dev/null; then
-    echo "Error: Docker Compose is not installed. Please install Docker Compose first."
+    echo "Error: Docker Compose is not installed."
     exit 1
 fi
 
@@ -28,7 +28,7 @@ cd "$(dirname "$0")/docker"
 if [ ! -f .env ]; then
     echo "Creating .env from .env.example..."
     cp .env.example .env
-    echo "IMPORTANT: Please edit docker/.env to set your SECRET_KEY and other passwords!"
+    echo "IMPORTANT: Please edit docker/.env to set your SECRET_KEY!"
     echo ""
 fi
 
@@ -37,14 +37,15 @@ if [ ! -f middleware.env ]; then
     cp middleware.env.example middleware.env
 fi
 
-echo "Starting middleware services (PostgreSQL, Redis, Weaviate)..."
-docker compose -f docker-compose.middleware.yaml --env-file middleware.env up -d
+echo "Building and starting middleware services..."
+docker compose -f docker-compose.middleware.yaml --env-file middleware.env up -d --build
 echo ""
 
 echo "Waiting for middleware to be ready..."
-sleep 10
+sleep 15
 
-echo "Starting BetaAI services..."
+echo "Building and starting BetaAI services..."
+cd ..
 docker compose up -d --build
 echo ""
 

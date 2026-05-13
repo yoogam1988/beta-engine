@@ -730,7 +730,7 @@ services:
 
   # API service
   api:
-    image: betaai/betaai-api:1.13.3
+    image: langgenius/dify-api:1.13.3
     restart: always
     environment:
       # Use the shared environment variables.
@@ -772,7 +772,7 @@ services:
   # worker service
   # The Celery worker for processing all queues (dataset, workflow, mail, etc.)
   worker:
-    image: betaai/betaai-api:1.13.3
+    image: langgenius/dify-api:1.13.3
     restart: always
     environment:
       # Use the shared environment variables.
@@ -811,7 +811,7 @@ services:
   # worker_beat service
   # Celery beat for scheduling periodic tasks.
   worker_beat:
-    image: betaai/betaai-api:1.13.3
+    image: langgenius/dify-api:1.13.3
     restart: always
     environment:
       # Use the shared environment variables.
@@ -841,7 +841,7 @@ services:
 
   # Frontend web application.
   web:
-    image: betaai/betaai-web:1.13.3
+    image: langgenius/dify-web:1.13.3
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}
@@ -954,7 +954,7 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: betaai/betaai-sandbox:0.2.14
+    image: langgenius/dify-sandbox:0.2.14
     restart: always
     environment:
       # The DifySandbox configurations
@@ -978,7 +978,7 @@ services:
 
   # plugin daemon
   plugin_daemon:
-    image: betaai/betaai-plugin-daemon:0.5.3-local
+    image: langgenius/dify-plugin-daemon:0.5.3-local
     restart: always
     environment:
       # Use the shared environment variables.

@@ -97,7 +97,7 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: betaai/betaai-sandbox:0.2.14
+    image: langgenius/dify-sandbox:0.2.14
     restart: always
     env_file:
       - ./middleware.env
@@ -123,7 +123,7 @@ services:
 
   # plugin daemon
   plugin_daemon:
-    image: betaai/betaai-plugin-daemon:0.5.3-local
+    image: langgenius/dify-plugin-daemon:0.5.3-local
     restart: always
     env_file:
       - ./middleware.env

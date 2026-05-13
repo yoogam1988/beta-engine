@@ -1,7 +1,7 @@
-# BetaAI (贝塔引擎) One-Click Deploy Script for Windows
+# BetaAI One-Click Deploy Script for Windows
 
 Write-Host "========================================="
-Write-Host "  BetaAI (贝塔引擎) One-Click Deploy"
+Write-Host "  BetaAI One-Click Deploy"
 Write-Host "========================================="
 Write-Host ""
 
@@ -31,7 +31,7 @@ Set-Location -Path "$PSScriptRoot\docker"
 if (-not (Test-Path ".env")) {
     Write-Host "Creating .env from .env.example..."
     Copy-Item ".env.example" ".env"
-    Write-Host "IMPORTANT: Please edit docker\.env to set your SECRET_KEY and other passwords!"
+    Write-Host "IMPORTANT: Please edit docker\.env to set your SECRET_KEY!"
     Write-Host ""
 }
 
@@ -40,14 +40,15 @@ if (-not (Test-Path "middleware.env")) {
     Copy-Item "middleware.env.example" "middleware.env"
 }
 
-Write-Host "Starting middleware services (PostgreSQL, Redis, Weaviate)..."
-docker compose -f docker-compose.middleware.yaml --env-file middleware.env up -d
+Write-Host "Building and starting middleware services..."
+docker compose -f docker-compose.middleware.yaml --env-file middleware.env up -d --build
 Write-Host ""
 
 Write-Host "Waiting for middleware to be ready..."
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 15
 
-Write-Host "Starting BetaAI services..."
+Write-Host "Building and starting BetaAI services..."
+Set-Location -Path "$PSScriptRoot"
 docker compose up -d --build
 Write-Host ""
 
