@@ -1,0 +1,24 @@
+services:
+  api:
+    image: atomflow/api:internal-20260507
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  worker:
+    image: atomflow/api:internal-20260507
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  worker_beat:
+    image: atomflow/api:internal-20260507
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  web:
+    image: atomflow/web:internal-20260507
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile

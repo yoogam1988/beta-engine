@@ -1,0 +1,24 @@
+services:
+  api:
+    image: betaai/betaai-api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  worker:
+    image: betaai/betaai-api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  worker_beat:
+    image: betaai/betaai-api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+
+  web:
+    image: betaai/betaai-web
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
