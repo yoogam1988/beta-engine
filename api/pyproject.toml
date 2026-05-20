@@ -5,7 +5,7 @@ requires-python = ">=3.11,<3.13"
 
 dependencies = [
     "aliyun-log-python-sdk~=0.9.37",
-    "arize-phoenix-otel~=0.15.0",
+    "arize-phoenix-otel~=0.16.1",
     "azure-identity==1.25.3",
     "beautifulsoup4==4.14.3",
     "boto3==1.42.78",
@@ -34,13 +34,13 @@ dependencies = [
     "jieba==0.42.1",
     "json-repair>=0.55.1",
     "langfuse~=2.51.3",
-    "langsmith~=0.7.16",
+    "langsmith~=0.8.5",
     "markdown~=3.10.2",
     "mlflow-skinny>=3.0.0",
     "numpy~=1.26.4",
     "openpyxl~=3.1.5",
     "opik~=1.10.37",
-    "litellm==1.82.6",                                    # Pinned to avoid madoka dependency issue
+    "litellm==1.85.0",                                    # Pinned to avoid madoka dependency issue
     "opentelemetry-api==1.28.0",
     "opentelemetry-distro==0.49b0",
     "opentelemetry-exporter-otlp==1.28.0",
